@@ -24,7 +24,7 @@ const ChatInterface: React.FC = () => {
 
   const mutation = useMutation({
     mutationFn: (message: string) =>
-      axios.post("http://localhost:5000/chat", { message }),
+      axios.post("https://multi-agent-backend.onrender.com/chat", { message }),
     onSuccess: (data) => {
       setMessages((prev) => [
         ...prev,
